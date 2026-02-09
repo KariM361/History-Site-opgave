@@ -1,21 +1,19 @@
-import { BrowserRouter, Route, Routes, useLocation } from 'react-router'
+import { BrowserRouter, Route, Routes } from 'react-router'
 import './App.css'
 import { Nav } from './components/Nav/Nav';
-import React from 'react';
-import {ByDate} from './pages/Date/ByDateSite'
+import { Header } from './components/Header/Header';
+import {ByDate} from './pages/Date/ByDate'
 import{Since} from './pages/Since/Since'
-import{ Today} from './pages/Today/TodaySite'
+import{ Today} from './pages/Today/Today'
+
 
 function App() {
- let location = useLocation();
-   React.useEffect(() => {
-    // Google Analytics
-    ga('send', 'pageview');
-  }, [location]);
+ 
  return (
     <>
 
           <BrowserRouter>
+          <Header></Header>
           <Nav/>
         <Routes>
             <Route path='/ByDate' element={<ByDate/>} />

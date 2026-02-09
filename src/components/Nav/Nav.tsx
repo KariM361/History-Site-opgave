@@ -1,25 +1,18 @@
-import { NavLink } from 'react-router'
-import style from './Navbar.module.scss'
+import { NavLink } from "react-router";
 
-interface NavProps {
-  Nav: string
-  linksNav: Array<{ name: string; path: string }>
-}
-
-export function Nav (props: NavProps) {
-  const {Nav, linksNav } = props
-
-  return (
-    <nav className={style.navStyle}>
-      <h3>{Nav}</h3>
+export function Nav(){
+  return(
+    <nav>
       <ul>
-        {linksNav.map((item) => {
-          return (
-            <li key={item.path}>
-              <NavLink to={item.path}>{item.name.toUpperCase()}</NavLink>
-            </li>
-          )
-        })}
+        <li>
+          <NavLink to='/ByDate'>By Date</NavLink>
+        </li>
+        <li>
+          <NavLink to='/Since'>Since</NavLink>
+        </li>
+        <li>
+          <NavLink to='/Today'>Today</NavLink>
+        </li>
       </ul>
     </nav>
   )
