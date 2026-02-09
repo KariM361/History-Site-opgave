@@ -1,0 +1,7 @@
+@use '../../styles/globals' as globals;
+
+.navbarStyle {
+   border-bottom: solid 2px globals.$colorlightBlack;
+  margin-bottom: 16px;
+
+}
