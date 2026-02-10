@@ -1,17 +1,19 @@
 import { NavLink } from "react-router";
+import style from './Nav.module.scss'
+
 
 export function Nav(){
   return(
-    <nav>
+    <nav className={style.navStyle}>
       <ul>
         <li>
-          <NavLink to='/ByDate'>By Date</NavLink>
+          <NavLink  to='/ByDate'>By Date</NavLink>
         </li>
         <li>
           <NavLink to='/Since'>Since</NavLink>
         </li>
         <li>
-          <NavLink to='/Today'>Today</NavLink>
+          <NavLink to='/'>Today</NavLink>
         </li>
       </ul>
     </nav>
