@@ -1,6 +1,7 @@
 import { useLocation } from 'react-router'
 import fotos from '../../assets/Images/fotos.jpg'
 import style from './Header.module.scss'
+import { Title } from '../Title/Title'
 
 export function Header() {
     let heading = `ON THIS DAY`
@@ -22,8 +23,11 @@ export function Header() {
 console.log(location.pathname);
 
     return (
-        <header>
+        <header className={style.container}>
             <img className={style.old_picture} src={fotos} alt="fotos" />
+            <div className={style.heading}>
+            <Title text={heading} pText={text}/>
+            </div>
         </header>
 
     )

@@ -1,24 +1,33 @@
-@use '../../Style/globals' as globals;
+@use "../../Style/globals.scss";
 
 .navStyle {
-    border-bottom: solid 2px globals.$colorlightBlack;
-  margin-bottom: 16px;
-   text-decoration: none;
+  background-color: globals.$colorBlack;
+  border-bottom: solid 2px globals.$colorlightBlack;
+  margin-top: 10vh;
 
-}
-li{
-  list-style: none;
-  
-}
-ul{
-  display: flex;
-  flex-direction: row;
-  gap:33%;
-}
-a{
-text-decoration: none;
-color:globals.$colorOlive;
-font-family: "Linden Hill", serif;
-font-weight: 400;
-size: 36px;
+  ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 20vw;
+    padding-left: 20vw;
+
+    li {
+      list-style: none;
+      a {
+        text-decoration: none;
+        color: globals.$colorOlive;
+        font-family: "Linden Hill", serif;
+
+        &:hover {
+          text-decoration: underline;
+          color: globals.$colorYellow;
+        }
+        &.active,
+        &:active {
+          text-decoration: undeline;
+        }
+      }
+    }
+  }
 }

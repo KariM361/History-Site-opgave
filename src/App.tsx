@@ -16,7 +16,7 @@ function App() {
           <Header></Header>
           <Nav/>
         <Routes>
-            <Route index element={<Today/>} />
+            <Route path='/Today' element ={<Today/>} />
             <Route path='/ByDate' element={<ByDate/>} />
             <Route path='/Since' element={<Since/>} />
           </Routes>

@@ -1,6 +1,15 @@
-@use '../../styles/globals' as globals;
+@use "../../Style/globals.scss" as globals;
 
 .titleStyle {
+  font-family: "Limelight", sans-serif;
+  font-weight: 400;
   font-size: 2rem;
   color: globals.$colorYellow;
+  text-align: center;
+}
+.pStyle {
+  font-family: "Linden Hill", serif;
+  font-weight: 400;
+  color: globals.$colorYellow;
+  text-align: center;
 }

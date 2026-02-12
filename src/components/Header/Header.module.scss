@@ -1,9 +1,30 @@
+@use '../../Style/globals.scss';
+
+body{
+        background-color:globals.$colorBlack;
+        
+}
+.container{
+position: relative;
+
 
 
 .old_picture{
     display: block;
     width:100%;
     object-fit: cover;
-  
-    
+      
+}
+.heading{
+    width: 60vw;
+    border: 5px solid;
+    color:globals.$colorOlive;
+    background-color: globals.$colorlightBlack;
+    position:absolute;
+    height: 25vh;
+    width: 60vw;
+    bottom: -50px;
+    left: 20vw;
+
+}
 }

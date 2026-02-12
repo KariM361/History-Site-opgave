@@ -1,0 +1,98 @@
+@use'../../Style/globals.scss';
+
+.Since{
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+
+p{
+    color: globals.$colorwhite;
+}
+
+}
+.timeline {
+  position: relative;
+  width: 80%;
+  margin: auto;
+  padding: 40px 0;
+  color: globals.$colorOlive;
+}
+
+// lodret midterlinje
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background: globals.$colorOlive;
+  transform: translateX(-50%);
+}
+
+.Since {
+  position: relative;
+  width: 50%;
+  padding: 20px 40px;
+  box-sizing: border-box;
+}
+
+// cirkel på midten
+.Since::before {
+  content: "";
+  position: absolute;
+  top: 32px;
+  width: 14px;
+  height: 14px;
+  background: globals.$colorOlive;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+// vandret arm
+.Since::after {
+  content: "";
+  position: absolute;
+  top: 38px;
+  width: 30px;
+  height: 4px;
+  background: globals.$colorOlive;
+}
+
+// højre side
+.Since:nth-child(even) {
+  text-align: right;
+}
+
+.Since:nth-child(even)::before {
+  right: -7px;
+}
+
+.Since:nth-child(even)::after {
+  right: 0px;
+}
+
+// venstre side
+.Since:nth-child(odd) {
+  margin-left: 50%;
+}
+
+.Since:nth-child(odd)::before {
+  left: -7px;
+}
+
+.Since:nth-child(odd)::after {
+  left: 0px;
+}
+
+// kortet
+.card {
+  background: globals.$colorBlack;
+  padding: 16px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.year {
+  font-weight: bold;
+  margin-bottom: 6px;
+}
