@@ -1,5 +1,112 @@
-@use'../../Style/globals.scss';
+@use "../../Style/globals.scss";
 
-.Today{
-color: globals.$colorwhite;
+.Today {
+  color: globals.$colorwhite;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  position: relative;
+  width: 50%;
+  padding: 20px 40px;
+  box-sizing: border-box;
+
+  p {
+    color: globals.$colorwhite;
+    text-align: center;
+  }
+}
+.timeline {
+  position: relative;
+  width: 80%;
+  margin: auto;
+  padding: 40px 0;
+  color: globals.$colorOlive;
+}
+
+// lodret midterlinje
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background: globals.$colorOlive;
+  transform: translateX(-50%);
+}
+
+// stor start-dot
+.timeline::after {
+  content: "";
+  position: absolute;
+  top: 0; // hæver den over første event
+  left: 50%;
+  transform: translateX(-50%);
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: globals.$colorOlive;
+  border: 4px solid globals.$colorBlack; // optional kant
+  z-index: 5;
+}
+
+// cirkel på midten
+.Today:before {
+  content: "";
+  position: absolute;
+  top: 32px;
+  width: 14px;
+  height: 14px;
+  background: globals.$colorlightBlack;
+  border: 2px solid globals.$colorOlive;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+// vandret arm
+.Today:after {
+  content: "";
+  position: absolute;
+  top: 38px;
+  width: 50px;
+  height: 4px;
+  background: globals.$colorOlive;
+}
+
+// højre side
+.Today:nth-child(even) {
+  text-align: right;
+}
+
+.Today:nth-child(even)::before {
+  right: -7px;
+}
+
+.Today:nth-child(even)::after {
+  right: 0px;
+}
+
+// venstre side
+.Today:nth-child(odd) {
+  margin-left: 50%;
+}
+
+.Today:nth-child(odd)::before {
+  left: -7px;
+}
+
+.Today:nth-child(odd)::after {
+  left: 0px;
+}
+
+// kortet
+.card {
+  background: globals.$colorBlack;
+  padding: 16px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.year {
+  font-weight: bold;
+  margin-bottom: 6px;
 }

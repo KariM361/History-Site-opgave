@@ -1,7 +1,7 @@
 import style from './Title.module.scss'
 
 interface TitleProps {
-  text: string
+  text: React.ReactNode
   pText: string
 }
 
