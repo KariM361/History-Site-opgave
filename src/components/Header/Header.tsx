@@ -57,6 +57,6 @@ export function Header() {
       <div className={style.heading}>
         <Title text={heading} pText={text} />
       </div>
-    </header>
+        </header>
   );
 }

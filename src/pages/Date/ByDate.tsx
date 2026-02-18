@@ -19,6 +19,7 @@ export function ByDate() {
     console.log(data);
 
     return (
+        
         <div className={style.timeline}>
             {data?.data?.Events?.map((item, index) => {
                 // Brug index % 2 til at skifte side: left/right
