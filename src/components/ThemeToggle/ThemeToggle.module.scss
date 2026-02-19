@@ -1,0 +1,16 @@
+
+.bulb {
+  font-size: 1.8rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, filter 0.3s ease;
+
+  &:hover {
+    transform: scale(1.15);
+  }
+}
+
+.on {
+  filter: drop-shadow(0 0 6px global.$colorYellow);
+}
