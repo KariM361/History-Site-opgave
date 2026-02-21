@@ -4,6 +4,8 @@ import { Header } from './components/Header/Header';
 import {ByDate} from './pages/Date/ByDate'
 import{Since} from './pages/Since/Since'
 import{ Today} from './pages/Today/Today'
+import { ThemeToggle } from './components/ThemeToggle/ThemeToggle';
+import './Style/_theme.scss'
 
 
 
@@ -13,6 +15,7 @@ function App() {
     <>
 
           <BrowserRouter>
+          <ThemeToggle/>
           <Header></Header>
           <Nav/>
         <Routes>

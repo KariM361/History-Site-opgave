@@ -1,34 +1,23 @@
 import { useEffect, useState } from "react";
-import styles from "./ThemeToggle.module.scss";
+import style from "./ThemeToggle.module.scss";
+import bulb from "../../assets/bulb.png";
 
 export function ThemeToggle() {
   const [dark, setDark] = useState(false);
 
-  useEffect(() => {
-    const saved = localStorage.getItem("theme");
-    if (saved === "dark") {
-      setDark(true);
-      document.body.classList.add("dark");
-    }
-  }, []);
+  function toggleTheme() {
+    const newMode = !dark;
+    setDark(newMode);
 
-  useEffect(() => {
-    if (dark) {
-      document.body.classList.add("dark");
-      localStorage.setItem("theme", "dark");
-    } else {
-      document.body.classList.remove("dark");
-      localStorage.setItem("theme", "light");
-    }
-  }, [dark]);
+    document.body.classList.toggle("dark", newMode);
+  }
 
   return (
-    <button
-      className={`${styles.bulb} ${dark ? styles.on : ""}`}
-      onClick={() => setDark(!dark)}
-      aria-label="Toggle theme"
-    >
-      💡
-    </button>
+    <img
+      src={bulb}
+      className={style.bulb}
+      onClick={toggleTheme}
+      alt="theme toggle"
+    />
   );
 }

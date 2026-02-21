@@ -1,0 +1,41 @@
+@use './globals.scss' as globals;
+
+/* LIGHT MODE (default) */
+
+body {
+  background-color: globals.$colorwhite;
+  color: globals.$colorlightBlack;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+/* nav baggrund i light */
+.nav {
+  background-color: globals.$colorwhite;
+}
+
+/* header/heading container */
+.heading {
+  background-color: globals.$colorwhite;
+}
+
+/* DARK MODE */
+
+body.dark {
+  background-color: globals.$colorBlack;
+  color: globals.$colorwhite;
+}
+
+body.dark nav {
+  background-color: globals.$colorlightBlack;
+}
+
+body.dark .heading {
+  background-color: globals.$colorlightBlack;
+}
+  body .heading {
+  background: globals.$colorwhite;
+}
+
+body.dark .heading {
+  background: globals.$colorlightBlack;
+}

@@ -1,16 +1,16 @@
+@use '../../Style/theme';
 
 .bulb {
-  font-size: 1.8rem;
-  background: transparent;
-  border: none;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
   cursor: pointer;
-  transition: transform 0.2s ease, filter 0.3s ease;
+  z-index: 999;
+  transition: transform 0.2s ease;
 
   &:hover {
-    transform: scale(1.15);
+    transform: scale(1.1);
   }
-}
-
-.on {
-  filter: drop-shadow(0 0 6px global.$colorYellow);
 }
